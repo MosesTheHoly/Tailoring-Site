@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="shortcut icon" href="#"> <!-- Fix for favicon error-->
+
+    <!-- Google Fonts - "Lora" & "Playfair Display"-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!-- Stylesheet that all pages will use -->
+    <link rel="stylesheet" href="mainStyle.css">
+    
+    <title>Homepage</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">
+            <div class="logo">M</div>
+            <p>Mousa's Tailoring Service</p>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link customActive" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="prices.html">Prices</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="mainContainer">
+        <div class="splitContainer leftText">
+            <div class="imageSection">
+                <div class="customImageWindow bottomWindow">
+                    <img src="images/suit.jpg">
+                </div>
+            </div>
+            <div class="textSection">
+                <h1>High quality tailoring for an incredibly affordable price</h1>
+                <p>Check out our gallery to see what we can do</p>
+                <a href="#" class="customButton">Find out about us</a>
+            </div>
+        </div>
+    
+        <div class="splitContainer rightText">
+            <div class="imageSection">
+                <div class="customImageWindow topWindow">
+                    <img src="images/suit.jpg">
+                </div>
+            </div>
+            <div class="textSection">
+                <h1>Fabric alterations </h1>
+                <p>We also alter any kinds of fabrics you need.
+                    Click here to see our full products and services</p>
+                <a href="#" class="customButton">Our services</a>
+            </div>
+        </div>
+
+        <div class="testimonialContainer">
+            <div class="testimonialHeader">
+                <h1>Testimonials</h1>
+            </div>
+            <div class="testimonialCardContainer">
+                <div class="testimonialCard">
+                    <div class="testimonialStars">
+                        <span class="bi bi-star-fill"></span>
+                        <span class="bi bi-star-fill"></span>
+                        <span class="bi bi-star-fill"></span>
+                        <span class="bi bi-star-fill"></span>
+                        <span class="bi bi-star"></span>
+                    </div>
+                    <h2>Very Happy</h2>
+                    <p>
+                        Very happy with Prince Tailor. Greeted with a friendly smile and service. Had my dress altered and a few other fixes. Would definitely recommend this tailor, for all your tailoring needs
+                    </p>
+                </div>
+                <div class="testimonialCard">
+                    <div class="testimonialStars">
+                        <span class="bi bi-star-fill"></span>
+                        <span class="bi bi-star-fill"></span>
+                        <span class="bi bi-star-fill"></span>
+                        <span class="bi bi-star-fill"></span>
+                        <span class="bi bi-star-fill"></span>
+                    </div>
+                    <h2>Great Service</h2>
+                    <p>
+                        Great quality service and quick turnaround. I would definitely use them agian.
+                    </p>
+                </div>
+                <div class="testimonialCard">
+                    <div class="testimonialStars">
+                        <span class="bi bi-star-fill"></span>
+                        <span class="bi bi-star-fill"></span>
+                        <span class="bi bi-star-fill"></span>
+                        <span class="bi bi-star-half"></span>
+                        <span class="bi bi-star"></span>
+                    </div>
+                    <h2>Brilliant tailor</h2>
+                    <p>
+                        Great tailor. Gave him lots of items on short notice and got them back fixed to a high standard. I would certainly use again and again.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="preFooter">
+            <h3>Our Socials</h3>
+            <div class="socialButtons">
+                <a href="#">
+                    <div> <span class="bi bi-facebook"></span></div>
+                </a>
+                <a href="#">
+                    <div> <span class="bi bi-instagram"></span></div>
+                </a>
+                <a href="#">
+                    <div> <span class="bi bi-twitter"></span></div>
+                </a>
+                <a href="#">
+                    <div> <span class="bi bi-whatsapp"></span></div>
+                </a>
+            </div>
+        </div>
+    </div> <!-- mainContainer end -->
+    <footer>
+        <p>© Copyright By Mousa Aljasem</p>
+    </footer>
+
+    <!-- Bootstrap .js script-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>

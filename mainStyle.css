@@ -1,0 +1,483 @@
+:root {
+    --red: #D10000;
+    --black: #000000;
+    --white: #ffffff;
+    --mainFont: 'Playfair Display', serif;
+}
+
+body{
+    font-family: var(--mainFont);
+    color: var(--black);
+}
+
+/* Container that wraps all content below navbar
+placed before navbar because of ease of coding issues
+Max-width so content isn't stretch out too far
+*/
+.mainContainer{
+    max-width: 1100px;
+    padding: 0.5rem;
+    margin: auto;
+}
+
+/*#region NAVBAR */
+.navbar {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Navbar left side text */
+.navbar-brand {
+    display: inline-block;
+    font-size: 1.7rem;
+    margin: auto;
+}
+
+/* Navbar left side text */
+.navbar-brand p {
+    display: inline-block;
+    font-size: 1.7rem;
+    margin: auto;
+}
+
+/* Navbar Logo */
+.logo {
+    background-color: var(--red);
+    font-size: 2.3rem;
+    height: 1.5em;
+    width: 1.5em;
+    text-align: center;
+    color: var(--white);
+    display: inline-block;
+    margin: 0 0.2em 0 0;
+}
+
+
+/* Navbar items container */
+#navbarNav {
+    justify-content: end;
+}
+
+/* Navbar item */
+.nav-item > a { 
+    font-size: 1.4rem;
+    color: var(--black);
+}
+
+/* Navbar hovered item */
+.nav-item > a:hover { 
+    color: var(--red);
+}
+
+/* Navbar selected page */
+.nav-item .customActive { 
+    color: var(--red);
+}
+
+/*#endregion NAVBAR */
+
+/*#region customButton */
+/* 
+Use like this e.g.:
+    <a href="#" class="customButton">Button</a>
+*/
+.customButton {
+    background-color: var(--red);
+    display: inline-block;
+    border: none;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0.5rem 1.5rem;
+}
+
+.customButton:hover {
+    background-color: var(--black);
+}
+
+/*#endregion CustomButtom */
+
+/*#region Custom Window Element*/
+/*
+Use like this e.g.:
+    <div class="customImageWindow topWindow">
+        <img src="images/suit.jpg">
+    </div>
+*/
+
+.customImageWindow {
+    width: 20rem;
+    height: auto;
+    margin-right: 2rem;
+    overflow: hidden;
+    box-shadow: 30px -30px 0 0px white, 30px -30px 0 0.15rem var(--red);
+}
+.customImageWindow > img {
+    width: 100%;
+}
+
+/* Styling on top side */
+.topWindow {
+    border-radius: 50% 50% 0 0;
+}
+
+/* Styling on bottom side */
+.bottomWindow {
+    border-radius: 0 0 50% 50%;
+}
+/*#endregion Custom Window Element*/
+
+/*#region Split Container Element*/
+.splitContainer {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 1rem;
+    padding: 1rem;
+    margin: 2rem auto;
+}
+
+
+.splitContainer.rightText > .textSection {
+    grid-column: 2;
+    grid-row: 1;
+}
+.splitContainer.rightText > .imageSection {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.splitContainer.leftText > .textSection {
+    grid-column: 1;
+    grid-row: 1;
+}
+.splitContainer.leftText > .imageSection {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.splitContainer > .textSection {
+    width: 100%;
+}
+
+.splitContainer > .textSection > h1 {
+   font-weight: 700;
+   margin-bottom: 1rem;
+}
+.splitContainer > .textSection > p {
+   font-size: 1.2em;
+   margin-bottom: 1rem;
+}
+
+.splitContainer > div {
+    margin: auto;
+}
+/*#endregion Split Container Element*/
+
+/*#region Testimonial Section*/
+.testimonialContainer {
+    width: 100%;
+    margin: 3rem auto;
+}
+
+.testimonialHeader {
+    width: fit-content;
+    margin: auto;
+    position: relative;
+}
+
+/*These give the shortened border effect*/
+.testimonialHeader::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    width: 70%;
+    border-bottom: 2px solid var(--red);
+}
+.testimonialHeader::after {
+    content: "";
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 1;
+    height: 2px;
+    width: 70%;
+    border-bottom: 2px solid var(--red);
+}
+/*Inline-block to allow for margin: auto centering*/
+.testimonialHeader > h1{
+    display: inline-block;
+    font-weight: 700;
+}
+
+.testimonialCardContainer{
+    margin: 3rem auto;
+    display: flex;
+    column-gap: 3rem;
+    row-gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.testimonialCard {
+    max-width: 20rem;
+    border-radius: 1.5rem;
+    border: 2px solid var(--red);
+    padding: 1rem;
+    width: auto;
+}
+
+.testimonialStars{
+    display: flex;
+    column-gap: 1rem;
+    font-size: 2rem;
+    color: var(--red);;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.testimonialCard > h2{
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.testimonialCard > p{
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/*#endregion Testimonial Section*/
+
+.pricesSection > .headingSection > * {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.pricesSection > .headingSection > .discount {
+    color: var(--red);
+}
+
+.pricesSection > .tabSelector {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.pricesSection > .tabSelector > .tabLink {
+    border: none;
+    text-decoration: none;
+    background-color: var(--white);
+    font-size: 1.5rem;
+}
+
+.tabLink.selectedTab {
+    font-weight: 600;
+    color: var(--red);
+    border-bottom: 2px solid var(--red) !important;
+}
+
+
+.priceCard {
+    margin: 1.5rem auto;
+    padding: 2rem;
+    max-width: 50rem;
+    border-radius: 2rem;
+    border: 2px solid var(--red);
+    overflow: hidden;
+}
+
+.priceCard > .priceHeading{
+    margin: -2rem -2rem 0 -2rem;
+    padding: 2rem 2rem 0.3rem 2rem;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.priceCard > .priceHeading >  h1 {
+    color: var(--white);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-weight: 600;
+    border: #000000;
+    text-align: center;
+}
+
+.priceCard > .priceHeading > p {
+    color: var(--red);
+    font-weight: 600;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.priceCard > .priceHeading > .fromTag {
+    font-style: italic;
+    text-align: right;
+}
+
+.priceCard > .prices{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--red);
+}
+
+.priceCard > .prices:last-child {
+    border-bottom: 0px;
+}
+
+.priceCard > .prices > p {
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+}
+
+/*#region Footers*/
+.preFooter > .socialButtons {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.preFooter > .socialButtons > a > div {
+    display: flex;
+    font-size: 2.5rem;
+    height: 4.5rem;
+    width: 4.5rem;
+    background-color: var(--black);
+    border-radius: 50%;
+    color: var(--white);
+}
+.preFooter > .socialButtons > a > div > span {
+    margin: auto;
+}
+.preFooter > .socialButtons > a > div:hover {
+    cursor: pointer;
+    background-color: var(--red);
+    color: var(--white);
+}
+
+footer {
+    width: 100%;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+footer > p {
+    margin: auto;
+    padding: 0.3rem 0.1rem;
+    text-align: center;
+}
+/*#endregion Footers*/
+
+/*#region MEDIA QUERIES*/
+@media screen and (max-width:992px) {
+    .nav-link {
+        width: auto;
+        display: inline-block;
+    }
+    .nav-item{
+        margin: auto;
+    }
+}
+
+@media screen and (max-width:850px) {
+
+    .splitContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .splitContainer.rightText > .textSection {
+        margin-left: 0;
+    }
+    a {
+        margin: auto;
+    }
+    
+    .customImageWindow {
+        width: 15rem;
+    }
+    .splitContainer > .textSection {
+        width: auto;
+    }
+
+    .testimonialHeader > h1{
+        font-size: 3rem;
+    }
+}
+
+
+@media screen and (max-width:708px) {
+    .testimonialCardContainer {
+        display: block;
+        width: 100%;
+    }
+    
+    .testimonialCard {
+        margin:  3rem auto;
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width:515px) {
+
+    body {
+        padding: 0;
+    }
+
+    .navbar {
+        padding: 0.5rem 0.3rem;
+    }
+    .navbar-brand p {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width:470px) {
+
+    .navbar-brand p {
+        font-size: 1.4rem;
+    }
+
+    /* Navbar Logo */
+    .logo {
+        font-size: 1.5rem;
+        display: inline-block;
+        margin: 0 0 0 0;
+    }
+}
+
+@media screen and (max-width:380px) {
+
+    .navbar-brand {
+        margin-left: 0.5rem;
+    }
+
+    .navbar-brand p {
+        display: none;
+    }
+
+    /* Navbar Logo */
+    .logo {
+        font-size: 3rem;
+        display: inline-block;
+        justify-content: start;
+        margin: 0 0 0 0;
+    }
+    .preFooter > .socialButtons {
+        gap: 0.5rem;
+    }
+    .preFooter > .socialButtons > a > div {
+        font-size: 1.5rem;
+        height: 3rem;
+        width: 3rem;
+    }
+}
+/*#endregion MEDIA QUERIES*/
